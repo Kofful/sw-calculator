@@ -8,5 +8,5 @@ public interface MultiplyInterface {
      * @param secondMultiplier second multiplier
      * @return product
      */
-    public abstract double multiply(double firstMultiplier, double secondMultiplier);
+    double multiply(double firstMultiplier, double secondMultiplier);
 }

@@ -8,5 +8,5 @@ public interface SubtractInterface {
      * @param subtracted subtracted number
      * @return difference
      */
-    public abstract double subtract(double reduced, double subtracted);
+    double subtract(double reduced, double subtracted);
 }

@@ -8,5 +8,5 @@ public interface SumInterface {
      * @param secondAddition second addition
      * @return sum
      */
-    public abstract double sum(double firstAddition, double secondAddition);
+    double sum(double firstAddition, double secondAddition);
 }

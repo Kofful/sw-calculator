@@ -8,5 +8,5 @@ public interface DivideInterface {
      * @param divisor divisor
      * @return fraction
      */
-    public abstract double divide(double divisible, double divisor);
+    double divide(double divisible, double divisor);
 }
