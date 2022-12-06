@@ -9,4 +9,12 @@ public interface SumInterface {
      * @return sum
      */
     double sum(double firstAddition, double secondAddition);
+
+    void setFirstAddition(double firstAddition);
+
+    double getFirstAddition();
+
+    void setSecondAddition(double secondAddition);
+
+    double getSecondAddition();
 }
