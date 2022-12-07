@@ -8,5 +8,9 @@ public interface DivideInterface {
      * @param divisor divisor
      * @return fraction
      */
-    double divide(double divisible, double divisor);
+    double divide();
+    double getDivisible();
+    void setDivisible(double divisible);
+    double getDivisor();
+    void setDivisor(double divisor);
 }
