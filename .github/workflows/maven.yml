@@ -32,3 +32,9 @@ jobs:
     - name: Publish Test Report
       if: ${{ always() }} #publish report even if the tests are failing
       uses: scacap/action-surefire-report@v1
+
+  test-compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check tests compilation
+        run: mvn test -Dbuild.failOnError=true

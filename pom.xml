@@ -12,6 +12,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <build.failOnError>false</build.failOnError>
     </properties>
 
     <build>
@@ -26,7 +27,7 @@
                             <goal>testCompile</goal>
                         </goals>
                         <configuration>
-                            <failOnError>false</failOnError>
+                            <failOnError>${build.failOnError}</failOnError>
                         </configuration>
                     </execution>
                 </executions>
