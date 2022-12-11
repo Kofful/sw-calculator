@@ -1,41 +1,56 @@
 package khai.calculator.services;
 
-import khai.calculator.operations.MultiplyInterface;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class ProductOfTwoNumbersTest {
-    private MultiplyInterface multiplyService;
+    private ProductOfTwoNumbers productService;
 
     @Before
     public void setUp() {
-        this.multiplyService = new ProductOfTwoNumbers();
+        this.productService = new ProductOfTwoNumbers();
     }
 
     @Test
     public void productOfTwoNegativeNumbers() {
-        assertEquals(25, multiplyService.multiply(-5, -5), 0);
+        productService.setFirstMultiplier(-5);
+        productService.setSecondMultiplier(-5);
+        assertEquals(25, productService.multiply(), 0);
     }
 
     @Test
     public void productOfOneNegativeAndPositiveNumber() {
-        assertEquals(-25, multiplyService.multiply(-5, 5), 0);
-        assertEquals(-25, multiplyService.multiply(5, -5), 0);
+        productService.setFirstMultiplier(-5);
+        productService.setSecondMultiplier(5);
+        assertEquals(-25, productService.multiply(), 0);
+        productService.setFirstMultiplier(5);
+        productService.setSecondMultiplier(-5);
+        assertEquals(-25, productService.multiply(), 0);
     }
 
     @Test
     public void productOfDoubleNumbers() {
-        assertEquals(-5, multiplyService.multiply(50, -0.1), 0);
-        assertEquals(-5, multiplyService.multiply(-0.1, 50), 0);
-        assertEquals(5, multiplyService.multiply(50, 0.1), 0);
+        productService.setFirstMultiplier(50);
+        productService.setSecondMultiplier(-0.1);
+        assertEquals(-5, productService.multiply(), 0);
+        productService.setFirstMultiplier(-0.1);
+        productService.setSecondMultiplier(50);
+        assertEquals(-5, productService.multiply(), 0);
+        productService.setFirstMultiplier(50);
+        productService.setSecondMultiplier(0.1);
+        assertEquals(5, productService.multiply(), 0);
     }
 
     @Test
     public void productOfTens() {
-        assertEquals(500, multiplyService.multiply(10, 50), 0);
-        assertEquals(500, multiplyService.multiply(50, 10), 0);
+        productService.setFirstMultiplier(10);
+        productService.setSecondMultiplier(50);
+        assertEquals(500, productService.multiply(), 0);
+        productService.setFirstMultiplier(50);
+        productService.setSecondMultiplier(10);
+        assertEquals(500, productService.multiply(), 0);
     }
 
 
