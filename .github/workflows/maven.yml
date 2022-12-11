@@ -30,4 +30,5 @@ jobs:
     - name: Build and Run Tests
       run: mvn test --batch-mode --fail-at-end
     - name: Publish Test Report
+      if: ${{ always() }} #publish report even if the tests are failing
       uses: scacap/action-surefire-report@v1

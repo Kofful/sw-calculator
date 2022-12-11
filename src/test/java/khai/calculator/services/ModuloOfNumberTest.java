@@ -32,7 +32,7 @@ public class ModuloOfNumberTest {
 
     @Test
     public void shouldReturnExpectedResultForNegativeNumbers() {
-        assertEquals(moduloService.mod(-900, 100), 100, 0);
-        assertEquals(moduloService.mod(100, -900), 0, 0);
+        assertEquals(moduloService.mod(-900, 100), 0, 0);
+        assertEquals(moduloService.mod(100, -900), 100, 0);
     }
 }
